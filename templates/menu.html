@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %} B&B Chai Cafe - Menu {% endblock %}
+
+{% block content %}
+
+<div class="w3-row w3-section">
+    <div class="w3-half w3-container">
+        <a class="w3-button w3-light-gray w3-round w3-border w3-block" href="/add-menu">
+            &#10133; Add Menu &#10133;
+        </a>
+    </div>
+    <div class="w3-half w3-container">
+        <input class="w3-input w3-light-gray w3-round w3-border w3-center" type="text"
+               placeholder=" &#128270; Search Menu &#128269; ">
+    </div>
+</div>
+
+<div class="w3-responsive">
+    <table class="w3-table-all">
+        <tr class="w3-blue">
+            <th>Menu Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        {% for menu in all_menus %}
+        <tr>
+            <td>{{ menu.menu_name }}</td>
+            <td>{{ menu.menu_price }}</td>
+            <td>
+                <a href="update-menu/{{ menu.id }}" title="Update Menu" style="text-decoration: none;">&#9889;</a>
+                &emsp;
+                <a href="delete-menu/{{ menu.id }}" title="Delete Menu" style="text-decoration: none;">&#10060;</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

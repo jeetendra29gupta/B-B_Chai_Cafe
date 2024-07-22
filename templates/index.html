@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} B&B Chai Cafe - Index {% endblock %}
+
+{% block content %}
+
+<form class="w3-container w3-section" style="width: 50%; margin: 0 auto" action="/new-customer" method="post">
+    <div class="w3-container w3-section">
+        <label for="customer_name">Customer Name</label>
+        <input class="w3-input w3-light-gray w3-round w3-border w3-center"
+               type="text" placeholder="Customer Name" id="customer_name" name="customer_name">
+    </div>
+    <div class="w3-container w3-section">
+        <label for="phone_number">Phone Number</label>
+        <input class="w3-input w3-light-gray w3-round w3-border w3-center"
+               type="text" placeholder="Phone Number" id="phone_number" name="phone_number">
+    </div>
+    <div class="w3-row">
+        <div class="w3-half w3-container">
+            <input type="submit" value="Submit" class="w3-button w3-light-gray w3-round w3-border w3-block w3-ripple">
+        </div>
+        <div class="w3-half w3-container">
+            <input type="reset" value="Reset" class="w3-button w3-light-gray w3-round w3-border w3-block w3-ripple">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

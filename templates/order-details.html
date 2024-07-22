@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} B&B Chai Cafe - Index {% endblock %}
+
+{% block content %}
+
+<div class="w3-panel">
+    <div class="w3-row">
+        <div class="w3-half w3-container w3-blue">
+            <h2 class="w3-center">{{user_order.customer_name}}</h2>
+        </div>
+        <div class="w3-half w3-container w3-blue">
+            <h2 class="w3-center">{{user_order.phone_number}}</h2>
+        </div>
+        {% for order in user_order.order_list %}
+        <div class="w3-half w3-container">
+            <h4 class="w3-center">{{order.menu_name}}</h4>
+        </div>
+        <div class="w3-half w3-container">
+            <h4 class="w3-center">{{order.menu_price}}</h4>
+        </div>
+        {% endfor %}
+        <div class="w3-half w3-container w3-blue">
+            <h4 class="w3-center">Total</h4>
+        </div>
+        <div class="w3-half w3-container w3-blue">
+            <h4 class="w3-center">{{user_order.total_amount}}</h4>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

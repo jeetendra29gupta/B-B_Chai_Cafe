@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} B&B Chai Cafe - Menu {% endblock %}
+
+{% block content %}
+
+<form class="w3-container w3-section" style="width: 50%; margin: 0 auto" action="/save-menu" method="post">
+    <div class="w3-container w3-section">
+        <label for="menu_name">Menu Name</label>
+        <input class="w3-input w3-light-gray w3-round w3-border w3-center"
+               type="text" placeholder="Menu Name" id="menu_name" name="menu_name">
+    </div>
+    <div class="w3-container w3-section">
+        <label for="menu_price">Menu Price</label>
+        <input class="w3-input w3-light-gray w3-round w3-border w3-center"
+               type="number" placeholder="Menu Price" id="menu_price" name="menu_price">
+    </div>
+    <div class="w3-row">
+        <div class="w3-half w3-container">
+            <input type="submit" value="Submit" class="w3-button w3-light-gray w3-round w3-border w3-block w3-ripple">
+        </div>
+        <div class="w3-half w3-container">
+            <input type="reset" value="Reset" class="w3-button w3-light-gray w3-round w3-border w3-block w3-ripple">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

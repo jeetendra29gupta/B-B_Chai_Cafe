@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} B&B Chai Cafe - Index {% endblock %}
+
+{% block content %}
+
+<form class="w3-container w3-section" style="width: 50%; margin: 0 auto" action="/print-order" method="post">
+    <input type="hidden" name="customer_name" id="customer_name" value="{{customer.customer_name}}">
+    <input type="hidden" name="phone_number" id="phone_number" value="{{customer.phone_number}}">
+    {% for menu in all_menus %}
+    <div class="w3-container w3-section">
+        <div class="w3-row-padding w3-stretch">
+            <div class="w3-col s2 w3-container">
+                <input class="w3-check w3-light-gray w3-round w3-border w3-center" type="checkbox" name="items"
+                       id="{{menu.menu_name}}##{{ menu.menu_price }}" value="{{menu.menu_name}}##{{ menu.menu_price }}">
+            </div>
+            <div class="w3-col s5 w3-container">
+                <label>{{ menu.menu_name }}</label>
+            </div>
+            <div class="w3-col s5 w3-container">
+                <label>{{ menu.menu_price }}</label>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="w3-row">
+        <div class="w3-half w3-container">
+            <input type="submit" value="Submit" class="w3-button w3-light-gray w3-round w3-border w3-block w3-ripple">
+        </div>
+        <div class="w3-half w3-container">
+            <input type="reset" value="Reset" class="w3-button w3-light-gray w3-round w3-border w3-block w3-ripple">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

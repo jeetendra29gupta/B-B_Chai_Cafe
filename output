@@ -1,0 +1,34 @@
+Welcome to B&B Chai Cafe, Here is our MENU.
+
+Butter Chicken: 12.5
+Palak Paneer: 10.95
+Chole Bhature: 9.75
+Chicken Biryani: 13.25
+Paneer Tikka Masala: 11.5
+Aloo Paratha: 8.5
+Samosa: 2.75
+Tandoori Chicken: 14.0
+Masala Dosa: 9.25
+Rogan Josh: 12.75
+Pani Puri: 4.5
+Gulab Jamun: 3.0
+Raita: 3.25
+Naan: 2.0
+Mango Lassi: 4.75
+______________________________________________________________________
+Enter the item name you want to order: naan
+you have order Naan : price -> 2.0
+Do you want to order something else? (YES, NO) pani puri
+______________________________________________________________________
+Enter the item name you want to order: pani puri
+you have order Pani Puri : price -> 4.5
+Do you want to order something else? (YES, NO) ye
+______________________________________________________________________
+Enter the item name you want to order: tea
+The Item is not in Menu, Check and retry.
+______________________________________________________________________
+Enter the item name you want to order: Samosa
+you have order Samosa : price -> 2.75
+Do you want to order something else? (YES, NO) no
+______________________________________________________________________
+The total amount is 9.25, Have a nice Day.
