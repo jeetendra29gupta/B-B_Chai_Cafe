@@ -37,7 +37,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/jeetendra29gupta/B-B_Chai_Cafe.git
    cd b_and_b_chai_cafe
 
 2. Create a virtual environment:
